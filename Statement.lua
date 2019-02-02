@@ -71,7 +71,7 @@ function Statement:pop()
 	
 	--Update blocking positions
 	for i = #self.stack, 1, -1 do
-		if self.stack[i].blockUpdatePos then
+		if self.stack[i].blockUpdate then
 			self.blockUpdatePos = i
 			break
 		end
@@ -80,7 +80,7 @@ function Statement:pop()
 		end
 	end
 	for i = #self.stack, 1, -1 do
-		if self.stack[i].blockDrawPos then
+		if self.stack[i].blockDraw then
 			self.blockDrawPos = i
 			break
 		end
@@ -89,7 +89,7 @@ function Statement:pop()
 		end
 	end
 	for i = #self.stack, 1, -1 do
-		if self.stack[i].blockKeysPos then
+		if self.stack[i].blockKeys then
 			self.blockKeysPos = i
 			break
 		end
