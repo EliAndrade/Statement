@@ -106,7 +106,7 @@ end
 
 function Statement:draw()
 	if #self.stack > 0 then
-		for i = #self.stack, self.blockDrawPos == 0 and 1 or self.blockDrawPos, -1 do
+		for i = self.blockDrawPos == 0 and 1 or self.blockDrawPos, #self.stack do
 			if self.stack[i].draw then
 				self.stack[i]:draw()
 			end
